@@ -22,6 +22,7 @@ class GenresController < ApplicationController
   end
 
   def update
+    @genre = Genre.find(params{:id})
   end
 
   private
