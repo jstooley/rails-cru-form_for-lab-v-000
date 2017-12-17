@@ -19,4 +19,8 @@ class SongsController < ApplicationController
 
   def update
   end
+
+  def songs_params(*args)
+  	params.require(:genre).permit(*args)
+	end
 end
