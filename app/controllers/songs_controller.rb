@@ -23,6 +23,7 @@ class SongsController < ApplicationController
   def update
     @song = Song.find(params[:id])
     @song.update(songs_params(:name))
+    @song.save
   end
 
   def songs_params(*args)
