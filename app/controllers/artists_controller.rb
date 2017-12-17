@@ -23,4 +23,10 @@ class ArtistsController < ApplicationController
   def update
   end
 
+  private
+  def artists_params(*args)
+  	params.require(:school_class).permit(*args)
+	end
+end
+
 end
