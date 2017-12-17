@@ -17,7 +17,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
-      @artist = Artist.new(artists_params)
+      @artist = Artist.new(artists_params(:name, :bio))
   end
 
   def update
